@@ -22,11 +22,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,17 +41,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func addObject(){
         let ship = SpaceShip()
         ship.loadModal()
-        
-        //let xPos =
-        //let yPos =
-        //ship.position = SCNVector3(xPos, yPos, -1)
-        print("ship position : ")
-        print(ship.position)
-        
+        ship.position = SCNVector3(0,0,-3)
+        sceneView.scene.rootNode.addChildNode(ship)
     }
     
-    func moveTowards(){
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first{
+            let location = touch.location(in: sceneView)
+            
+            let hitList = sceneView.hitTest(location, options: nil)
         
+            if let hitObject = hitList.first{
+                let node = hitObject.node
+                
+                if (node.name == "ship"){
+                    node.removeFromParentNode()
+                }
+                
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

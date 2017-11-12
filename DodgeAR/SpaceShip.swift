@@ -18,8 +18,15 @@ class SpaceShip: SCNNode {
         for child in virtualObjectScene.rootNode.childNodes{
             wrapperNode.addChildNode(child)
         }
-        
         self.addChildNode(wrapperNode)
+    }
+    
+    func moveToward(){
+        let move = SCNAction.moveBy(x: 0, y: 0, z: 200, duration: 5)
+        
+        let seq:SCNAction = SCNAction.sequence([move]);
+        let repeatForever: SCNAction = SCNAction.repeatForever(seq)
+        self.runAction(repeatForever)
     }
 
 }
