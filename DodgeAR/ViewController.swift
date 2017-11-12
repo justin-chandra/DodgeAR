@@ -32,7 +32,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
-        addObject()
+        var i = 0
+        while i < 100 {
+            i += 1
+            addObject()
+        }
+//        addObject()
     }
     
     
@@ -40,13 +45,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func addObject(){
         let ship = SpaceShip()
         ship.loadModal()
-        ship.position = SCNVector3(0,0,-5)
+        let xPos = randomPosition(lowerBound: -5.5, upperBound: 5)
+        let yPos = randomPosition(lowerBound: -2, upperBound: 2)
+        let zPos = randomPosition(lowerBound: -10, upperBound: 0)
+        ship.position = SCNVector3(xPos,yPos, zPos)
         ship.moveToward()
         sceneView.scene.rootNode.addChildNode(ship)
     }
     
+    func randomPosition (lowerBound lower:Float, upperBound upper:Float) -> Float {
+        return Float(arc4random()) / Float(UInt32.max) * (lower - upper) + upper
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first{
+        addObject()
+        
+        /*if let touch = touches.first{
             let location = touch.location(in: sceneView)
             //print(location)
             let hitList = sceneView.hitTest(location, options: nil)
@@ -59,6 +73,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
             }
         }
+ */
         
     }
     
