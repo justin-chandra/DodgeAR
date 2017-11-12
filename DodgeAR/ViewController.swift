@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
@@ -38,6 +37,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
+        
+        addObject()
+    }
+    
+    
+    
+    func addObject(){
+        let ship = SpaceShip()
+        ship.loadModal()
+        
+        //let xPos =
+        //let yPos =
+        //ship.position = SCNVector3(xPos, yPos, -1)
+        print("ship position : ")
+        print(ship.position)
+        
+    }
+    
+    func moveTowards(){
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

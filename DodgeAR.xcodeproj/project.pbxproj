@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42AC51031FB7C3300040ED0A /* SpaceShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC51021FB7C3300040ED0A /* SpaceShip.swift */; };
 		4DC66DEF1FB7BB5B00C5336B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC66DEE1FB7BB5B00C5336B /* AppDelegate.swift */; };
 		4DC66DF11FB7BB5B00C5336B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC66DF01FB7BB5B00C5336B /* art.scnassets */; };
 		4DC66DF31FB7BB5B00C5336B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC66DF21FB7BB5B00C5336B /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42AC51021FB7C3300040ED0A /* SpaceShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShip.swift; sourceTree = "<group>"; };
 		4DC66DEB1FB7BB5B00C5336B /* DodgeAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodgeAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC66DEE1FB7BB5B00C5336B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC66DF01FB7BB5B00C5336B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				4DC66DF21FB7BB5B00C5336B /* ViewController.swift */,
 				4DC66DF41FB7BB5B00C5336B /* Main.storyboard */,
 				4DC66DF71FB7BB5B00C5336B /* Assets.xcassets */,
+				42AC51021FB7C3300040ED0A /* SpaceShip.swift */,
 				4DC66DF91FB7BB5B00C5336B /* LaunchScreen.storyboard */,
 				4DC66DFC1FB7BB5B00C5336B /* Info.plist */,
 			);
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42AC51031FB7C3300040ED0A /* SpaceShip.swift in Sources */,
 				4DC66DF31FB7BB5B00C5336B /* ViewController.swift in Sources */,
 				4DC66DEF1FB7BB5B00C5336B /* AppDelegate.swift in Sources */,
 			);
@@ -430,12 +434,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBSQ79SMXV;
+				DEVELOPMENT_TEAM = 29HJ4KTFKS;
 				INFOPLIST_FILE = DodgeAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Chandra.DodgeAR;
+				PRODUCT_BUNDLE_IDENTIFIER = ciampaglia.bundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,12 +451,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBSQ79SMXV;
+				DEVELOPMENT_TEAM = 29HJ4KTFKS;
 				INFOPLIST_FILE = DodgeAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Chandra.DodgeAR;
+				PRODUCT_BUNDLE_IDENTIFIER = ciampaglia.bundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +470,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBSQ79SMXV;
+				DEVELOPMENT_TEAM = 29HJ4KTFKS;
 				INFOPLIST_FILE = DodgeARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chandra.DodgeARTests;
@@ -479,7 +487,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBSQ79SMXV;
+				DEVELOPMENT_TEAM = 29HJ4KTFKS;
 				INFOPLIST_FILE = DodgeARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chandra.DodgeARTests;
@@ -495,7 +503,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBSQ79SMXV;
+				DEVELOPMENT_TEAM = 29HJ4KTFKS;
 				INFOPLIST_FILE = DodgeARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chandra.DodgeARUITests;
@@ -511,7 +519,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QBSQ79SMXV;
+				DEVELOPMENT_TEAM = 29HJ4KTFKS;
 				INFOPLIST_FILE = DodgeARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Chandra.DodgeARUITests;
