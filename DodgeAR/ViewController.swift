@@ -12,11 +12,7 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    var counter:Int = 0 {
-        didSet{
-//            counterLabel.text = "\(counter)"
-        }
-    }
+    var counter:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,8 +67,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     node.removeFromParentNode()
                     addObject()
                     addObject()
-                    addObject()
                     counter+=1
+                    print(counter)
                 }
             }
         }
