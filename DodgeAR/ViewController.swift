@@ -12,7 +12,11 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    
+    var counter:Int = 0 {
+        didSet{
+//            counterLabel.text = "\(counter)"
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,22 +36,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
-        var i = 0
-        while i < 100 {
-            i += 1
+        
+        var i = 0;
+        while(i < 10){
             addObject()
+            i = i + 1
         }
-//        addObject()
     }
-    
-    
     
     func addObject(){
         let ship = SpaceShip()
         ship.loadModal()
-        let xPos = randomPosition(lowerBound: -5.5, upperBound: 5)
-        let yPos = randomPosition(lowerBound: -2, upperBound: 2)
-        let zPos = randomPosition(lowerBound: -10, upperBound: 0)
+        let xPos = randomPosition(lowerBound: -2, upperBound: 2)
+        let yPos = randomPosition(lowerBound: -1, upperBound: 1)
+        let zPos = randomPosition(lowerBound: -10, upperBound: -5)
         ship.position = SCNVector3(xPos,yPos, zPos)
         ship.moveToward()
         sceneView.scene.rootNode.addChildNode(ship)
@@ -58,9 +60,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        addObject()
-        
-        /*if let touch = touches.first{
+        if let touch = touches.first{
             let location = touch.location(in: sceneView)
             //print(location)
             let hitList = sceneView.hitTest(location, options: nil)
@@ -69,49 +69,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 //print(node)
                 if (node.name == "shipMesh"){
                     node.removeFromParentNode()
+                    addObject()
+                    addObject()
+                    addObject()
+                    counter+=1
                 }
-                
             }
         }
- */
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        // Pause the view's session
         sceneView.session.pause()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
     }
     
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
+    func session(_ session: ARSession, didFailWithError error: Error) {}
     
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
+    func sessionWasInterrupted(_ session: ARSession) {}
+    
+    func sessionInterruptionEnded(_ session: ARSession) {}
 }

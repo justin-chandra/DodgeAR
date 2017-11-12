@@ -9,7 +9,7 @@
 import ARKit
 
 class SpaceShip: SCNNode {
-    
+    var age = 0.0
     func loadModal(){
         guard let virtualObjectScene = SCNScene(named: "art.scnassets/ship.scn") else {return}
         
@@ -22,7 +22,7 @@ class SpaceShip: SCNNode {
     }
     
     func moveToward(){
-        let move = SCNAction.moveBy(x: 0, y: 0, z: 60, duration: 20)
+        let move = SCNAction.moveBy(x: 0, y: 0, z: 60, duration: 30)
         
         let seq:SCNAction = SCNAction.sequence([move]);
         let repeatForever: SCNAction = SCNAction.repeatForever(seq)

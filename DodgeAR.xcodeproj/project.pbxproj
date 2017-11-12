@@ -12,7 +12,6 @@
 		4DC66DF11FB7BB5B00C5336B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC66DF01FB7BB5B00C5336B /* art.scnassets */; };
 		4DC66DF31FB7BB5B00C5336B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC66DF21FB7BB5B00C5336B /* ViewController.swift */; };
 		4DC66DF61FB7BB5B00C5336B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC66DF41FB7BB5B00C5336B /* Main.storyboard */; };
-		4DC66DF81FB7BB5B00C5336B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC66DF71FB7BB5B00C5336B /* Assets.xcassets */; };
 		4DC66DFB1FB7BB5B00C5336B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC66DF91FB7BB5B00C5336B /* LaunchScreen.storyboard */; };
 		4DC66E061FB7BB5B00C5336B /* DodgeARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC66E051FB7BB5B00C5336B /* DodgeARTests.swift */; };
 		4DC66E111FB7BB5B00C5336B /* DodgeARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC66E101FB7BB5B00C5336B /* DodgeARUITests.swift */; };
@@ -42,7 +41,6 @@
 		4DC66DF01FB7BB5B00C5336B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		4DC66DF21FB7BB5B00C5336B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DC66DF51FB7BB5B00C5336B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4DC66DF71FB7BB5B00C5336B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC66DFA1FB7BB5B00C5336B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DC66DFC1FB7BB5B00C5336B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC66E011FB7BB5B00C5336B /* DodgeARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodgeARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +103,6 @@
 				4DC66DF01FB7BB5B00C5336B /* art.scnassets */,
 				4DC66DF21FB7BB5B00C5336B /* ViewController.swift */,
 				4DC66DF41FB7BB5B00C5336B /* Main.storyboard */,
-				4DC66DF71FB7BB5B00C5336B /* Assets.xcassets */,
 				42AC51021FB7C3300040ED0A /* SpaceShip.swift */,
 				4DC66DF91FB7BB5B00C5336B /* LaunchScreen.storyboard */,
 				4DC66DFC1FB7BB5B00C5336B /* Info.plist */,
@@ -240,7 +237,6 @@
 			files = (
 				4DC66DF11FB7BB5B00C5336B /* art.scnassets in Resources */,
 				4DC66DFB1FB7BB5B00C5336B /* LaunchScreen.storyboard in Resources */,
-				4DC66DF81FB7BB5B00C5336B /* Assets.xcassets in Resources */,
 				4DC66DF61FB7BB5B00C5336B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +429,7 @@
 		4DC66E161FB7BB5B00C5336B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QBSQ79SMXV;
@@ -450,7 +446,7 @@
 		4DC66E171FB7BB5B00C5336B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QBSQ79SMXV;
