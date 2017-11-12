@@ -22,7 +22,7 @@ class SpaceShip: SCNNode {
     }
     
     func moveToward(){
-        let move = SCNAction.moveBy(x: 0, y: 0, z: 200, duration: 5)
+        let move = SCNAction.moveBy(x: 0, y: 0, z: 60, duration: 20)
         
         let seq:SCNAction = SCNAction.sequence([move]);
         let repeatForever: SCNAction = SCNAction.repeatForever(seq)
